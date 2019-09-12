@@ -2,11 +2,13 @@ body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding:0;
+    width:100%;
 }
 nav{
     border-bottom:1px solid;
     border-color: #e2e2e2;
-    padding:20px;
+    width:auto;
+    
 }
 .col-100{
     width:100%;
@@ -22,4 +24,7 @@ nav{
 }
 .col-10{
     width:10%;
+}
+.chunk{
+    display:block;
 }
