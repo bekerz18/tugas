@@ -8,56 +8,43 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <nav> 
-        <span>SMAN 4 Tasikmalaya</span>
-    </nav>
-    <form class="col-50" method="post" action="print.php">
-        <h1>Student Registration</h1>
-        <div class="chunk">
-            <label>Nama Lengkap</label>
-            <input type="text" name="nama" required autofocus/>
+    <div class="col-50 form-registrasi" style="background-color: #FAFAFA;height:300px;border-radius:5px;">
+        <div class="fill-id">
+            <div id="header col-100">
+                <div class="logo col-20" style="float:left;">
+                    <img src="logopatas.png" style="width:60%;"alt="">
+                </div>
+                <div class="kop col-80" style="float:left;">
+                    <span class="sekolah">SMA NEGERI 4 Tasikmalaya</span>
+                    <span class="alamat">Jl. LetKol RE DJaelani, Cilembang, Kec. Cihideung, Tasikmalaya</span>
+                </div>
+            </div>
+            <div id="data">
+                <table>
+                    <tr>
+                        <td>NIS</td>
+                        <td>: 14151011</td>
+                        <td rowspan="5"><img src="logopatas.png" style="width:20%;" alt=""></td>
+                    </tr>
+                    <tr>
+                        <td>Nama Lengkap</td>
+                        <td>: Zam Zam Saeful Bahtiar</td>
+                    </tr>
+                    <tr>
+                        <td>Tempat, Tanggal Lahir</td>
+                        <td>: Tasikmalaya, 18 Mei 1999</td>
+                    </tr>
+                    <tr>
+                        <td>Alamat</td>
+                        <td>: Cihonje 002/002 Karanganyar Kawalu TASIKMALAYA</td>
+                    </tr>
+                    <tr>
+                        <td>Agama</td>
+                        <td>: Islam</td>
+                    </tr>
+                </table>
+            </div>
         </div>
-        <div class="chunk">
-            <label>Nomor Identitas Siswa</label>
-            <input type="text" name="nis" required/>
-        </div>
-        <div class="chunk">
-            <label>Tempat, Tanggal Lahir</label>
-            <input type="text" name="tempat_lahir" required/>
-            <input type="date" name="tanggal_lahir" required/>
-        </div>
-        <div class="chunk">
-            <label>Agama</label>
-            <select name="agama" required>
-                <option value="Silahkan Pilih">Silahkan Pilih</option>
-                <option value="Islam">Islam</option>
-                <option value="Kristen Protestan">Kristen Protestan</option>
-                <option value="Kristen Katolik">Kristen Katolik</option>
-                <option value="Hindu">Hindu</option>
-                <option value="Buddha">Buddha</option>
-                <option value="Konghucu">Konghucu</option> 
-            </select>
-        </div>
-        <div class="chunk">
-            <label>Gol Darah</label>
-            <select name="darah" required>
-                <option value="Silahkan Pilih">Silahkan Pilih</option>
-                <option value="A">A</option>
-                <option value="B">B</option>
-                <option value="AB">AB</option>
-                <option value="O">O</option>
-                <option value="-">-</option>
-            </select>
-        </div>
-        <div class="chunk">
-            <label>Alamat</label>
-        </div>
-        <div class="chunk">
-            <textarea name="alamat_lengkap" required></textarea>
-        </div>
-        <div class="chunk">
-            <input name="submit" type="submit"/>
-        </div>
-    </form>
-</body>
+    </div>
+    </body>
 </html>

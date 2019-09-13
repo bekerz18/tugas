@@ -3,15 +3,82 @@ body{
     margin: 0;
     padding:0;
     width:100%;
+    background-color:#E8E8E8;
 }
-nav{
-    border-bottom:1px solid;
-    border-color: #e2e2e2;
-    width:auto;
-    
+.form-registrasi{
+    margin:180px auto;
+    width:85%;
+    display:block;
+}
+.form-kanan{
+    float:left;
+    background-color:#51C273;
+    color:#FFF;
+}
+.form-kiri{
+    float:left;
+    background-color: #FAFAFA;
+    position: relative;
+}
+.fill{
+    height:320px;
+}
+.kontrol{
+    background-color:#FAFAFA;
+    border: none;
+    border-bottom: 2px solid #e8ebed;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -webkit-transition: none;
+    color: #999;
+    height: 44px;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 6px 12px 3px 0;
+}
+input[type="submit"]{
+    background-color:#216BC4!important;
+    color:#FFF;
+    cursor: pointer;
+    margin:0;
+    padding:0!important;
+}
+input[type="submit"]:hover{
+    background-color:#114D96!important;
+   }
+.form-id{
+    background-color:#FAFAFA;
+    margin:80px auto;
+}
+.sekolah{
+    display:block;
+    text-align: center;
+    font-weight:900;
+}
+.alamat{
+    text-align:center;
+    display:block;    
+}
+.fill-id{
+    margin-top:20px;
+}
+.header{
+    border-bottom: 2px solid #272727;
+}
+#data{
+    margin-top:90px;
+    position: absolute;
+}
+input[type=checkbox], input[type=radio] {
+    box-sizing: border-box;
+    padding: 0;
 }
 .col-100{
     width:100%;
+}
+.col-80{
+    width:80%;
 }
 .col-50{
     width:50%;
