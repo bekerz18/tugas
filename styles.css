@@ -20,6 +20,12 @@ body{
     background-color: #FAFAFA;
     position: relative;
 }
+img.foto{
+    width:10%;
+    margin-top:20px;
+    margin-left:500px;
+    position: absolute;
+}
 .fill{
     height:320px;
 }
@@ -61,13 +67,18 @@ input[type="submit"]:hover{
     display:block;    
 }
 .fill-id{
+    /* background-image: url(bg.jpg); */
     margin-top:20px;
+}
+svg{
+    margin-top:90px;
+    border-radius:12px;
 }
 .header{
     border-bottom: 2px solid #272727;
 }
 #data{
-    margin-top:90px;
+    margin-top:20px;
     position: absolute;
 }
 input[type=checkbox], input[type=radio] {

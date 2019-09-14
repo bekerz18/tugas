@@ -18,8 +18,6 @@
             </div>
             <div class="form-kiri col-50">
                 <div class="fill" style="margin-left:10px;">
-                    <!-- <div class="chunk">
-                        <label>Nama Lengkap</label> -->
                         <div class="chunk">
                             <input type="text" class="kontrol"placeholder="Nomor Identitas Siswa" name="nis" required/>
                         </div>
@@ -28,25 +26,15 @@
                             <input type="radio" name="kelamin" value="Laki-Laki">Laki-Laki</input>
                             <input type="radio" name="kelamin" value="Perempuan">Perempuan</input>
                         </div>
-                    <!-- </div>
-                    <div class="chunk">
-                        <label>Nomor Identitas Siswa</label> -->
-                        
-                    <!-- </div>
-                    <div class="chunk">
-                        <label>Tempat, Tanggal Lahir</label> -->
                         <div class="chunk">
                             <input type="text" class="kontrol"placeholder="Tempat Lahir" name="tempat_lahir" required/>
                             <input type="date" class="kontrol" name="tanggal_lahir" required/>
                         </div>
-                    <!-- </div> -->
-                    <!-- <div class="chunk">
-                        <label>Agama</label> -->
                         <div class="chunk">
                             <textarea class="kontrol"  placeholder="Alamat Lengkap" name="alamat_lengkap" required></textarea>
                         </div>
                         <div class="chunk">
-                            <select class="kontrol" name="agama" required>
+                            <select class="kontrol" name="agama"required>
                                 <option value="Silahkan Pilih">Silahkan Pilih Agama</option>
                                 <option value="Islam">Islam</option>
                                 <option value="Kristen Protestan">Kristen Protestan</option>
