@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Student Registration - SMA NEGERI 4 TASIKMALAYA</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-        <form class="form-registrasi" method="post" action="print.php">
+        <form class="form-registrasi" method="post" action="print.php" enctype="multipart/form-data">
             <div class="form-kanan col-50">
                 <div class="fill">
-                    <img src="logopatas.png" alt="" style="width:30%;height:auto;margin:0 auto;display:block"/>          
+                    <img src="images/logopatas.png" alt="" style="width:30%;height:auto;margin:0 auto;display:block"/>          
                     <h1 align="center">ID Card Generator</h1>
                     <p>Silahkan masukan beberapa data dan klik register untuk mendapatkan ID Card.</p>
                 </div>
@@ -43,6 +43,7 @@
                                 <option value="Buddha">Buddha</option>
                                 <option value="Konghucu">Konghucu</option> 
                             </select>
+                            <input class="kontrol" name="foto" id="foto" type="file" value="Pas Foto"/>
                         </div>
                 </div>
                 <div class="chunk" style="margin-top:-42px;">
