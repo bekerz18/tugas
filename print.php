@@ -20,10 +20,15 @@
             $foto ="female.png";
         }
     }
-    
-    
-          
-
+    //membuat mini database dengan txt
+    $database = "db.txt";
+    //membuka file db
+    $open = fopen($database,"db") or die("Maaf, tidak bisa");
+    //membuat format untuk file txt
+    $data = "<tr><td>$nama</td><td>$kelamin</td><td>$ttl,  $tanggal</td><td>$agama</td><td>$alamat</td></tr>";
+    //menyimenyimpanmpan file ke db.txt
+    fwrite($open,$data);
+    fclose($open);
 ?>
 <!DOCTYPE html>
 <html lang="en">
