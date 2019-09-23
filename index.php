@@ -6,6 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Student Registration - SMA NEGERI 4 TASIKMALAYA</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" type="text/css" href="plugins/datatables/datatables.css"/>
+    
+
+    
 </head>
 <body>
         <form class="form-registrasi" method="post" action="print.php" enctype="multipart/form-data">
@@ -28,7 +32,7 @@
                         </div>
                         <div class="chunk">
                             <input type="text" class="kontrol"placeholder="Tempat Lahir" name="tempat_lahir" required/>
-                            <input type="date" class="kontrol" name="tanggal_lahir" required/>
+                            <input type="date" class="kontrol" name="tanggal_lahir"  required/>
                         </div>
                         <div class="chunk">
                             <textarea class="kontrol"  placeholder="Alamat Lengkap" name="alamat_lengkap" required></textarea>
@@ -51,5 +55,44 @@
                 </div>
             </div>
         </form>
+        <div class="clear"></div>
+        <div class="data col-80">
+            <div class="judul-data">
+                <span>Data</span>
+            </div>
+            <table id="data" class="display" style="width:100%">
+                <thead>
+                    <tr>
+                        <th>Nama Lengkap</th>
+                        <th>Jenis Kelamin</th>
+                        <th>Tempat dan Tanggal Lahir</th>
+                        <th>Agama</th>
+                        <th>Alamat</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                <?php
+                    $filename = "db.txt";
+                    $handle = fopen($filename, "rb");
+                    $contents = fread($handle, filesize($filename));
+                    fclose($handle);
+                    echo $contents;
+                ?>
+                </tbody>
+            </table>
+        </div>
+        <script src="js/jquery-3.4.1.min.js"></script>
+        <script type="text/javascript" src="plugins/datatables/datatables.js"></script>
+       <script>
+            $(document).ready(function() {
+                $('#data').DataTable( {
+                    dom: 'Bfrtip',
+                    buttons: [
+                        'copy', 'pdf', 'print'
+                    ]
+                } );
+            } );
+        </script>
 </body>
 </html>
