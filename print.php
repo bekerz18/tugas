@@ -11,24 +11,22 @@
     $status_foto = $_FILES['foto']['error'];
     $target_dir= "images/";
     $target_file= $target_dir . basename($foto);
-       if($status_foto == 0){
-        move_uploaded_file($tmp_foto, $target_file);
+    if(empty($kelamin) or $agama == "Silahkan Pilih"){
+        header("Location: index.php");
     }else{
-        if($kelamin == "Laki-Laki"){
-            $foto ="man.png"; 
-        }elseif($kelamin == "Perempuan"){
-            $foto ="female.png";
+        if($status_foto == 0){
+        move_uploaded_file($tmp_foto, $target_file);
+        }else{
+            if($kelamin == "Laki-Laki"){
+                $foto ="man.png";
+            }elseif($kelamin == "Perempuan"){
+                $foto ="female.png";
+            }
         }
+        $fp = fopen('db.txt', 'a') or die("Maaf, tidak bisa");
+        fwrite($fp, "<tr><td>$nama</td><td>$kelamin</td><td>$ttl,  $tanggal</td><td>$agama</td><td>$alamat</td><td>$foto</td></tr>");
+        fclose($fp);
     }
-    //membuat mini database dengan txt
-    $database = "db.txt";
-    //membuka file db
-    $open = fopen($database,"db") or die("Maaf, tidak bisa");
-    //membuat format untuk file txt
-    $data = "<tr><td>$nama</td><td>$kelamin</td><td>$ttl,  $tanggal</td><td>$agama</td><td>$alamat</td></tr>";
-    //menyimenyimpanmpan file ke db.txt
-    fwrite($open,$data);
-    fclose($open);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -83,5 +81,7 @@
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#0099ff" fill-opacity="1" d="M0,32L26.7,37.3C53.3,43,107,53,160,74.7C213.3,96,267,128,320,138.7C373.3,149,427,139,480,122.7C533.3,107,587,85,640,96C693.3,107,747,149,800,160C853.3,171,907,149,960,122.7C1013.3,96,1067,64,1120,80C1173.3,96,1227,160,1280,197.3C1333.3,235,1387,245,1413,250.7L1440,256L1440,320L1413.3,320C1386.7,320,1333,320,1280,320C1226.7,320,1173,320,1120,320C1066.7,320,1013,320,960,320C906.7,320,853,320,800,320C746.7,320,693,320,640,320C586.7,320,533,320,480,320C426.7,320,373,320,320,320C266.7,320,213,320,160,320C106.7,320,53,320,27,320L0,320Z"></path></svg>
         </div>
     </div>
+    <div style="clear:both;"></div>
+    <a class="info-kembali" href="index.php">Kembali</a>
     </body>
 </html>
